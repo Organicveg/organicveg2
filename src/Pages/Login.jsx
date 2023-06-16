@@ -7,30 +7,25 @@ export default function Login() {
   const onFormSubmit  = data => console.log(data);
   const onErrors = errors => console.error(errors);
   return (
-    <div>
+    <div className="bg-dark">
          <Container className="mt-5 pt-5">
-        <h1 className="text-center mb-5">Form</h1>
+        <h1 className="text-center mb-5 text-light">Login</h1>
 
-
+<div className="bg-warning">
 <form onSubmit={handleSubmit(onFormSubmit, onErrors)}>
 
-  <label className="mb-5" htmlFor="">Name</label>
-  <input type="text" name="name" {...register('name',{ required: "name is required" })} id="" />
+  <label style={{float:'center',position: 'relative',left:'530px',top:'10px'}} className="mb-5 text-light" htmlFor="">UserName</label>
+  <input type="text" style={{float:'center',position: 'relative',left:'550px',top:'10px'}} name="name" {...register('name',{ required: "name is required" })} id="" />
   <br />
-  <label className="mb-5" htmlFor="">Address</label>
-  <input type="text" name="address" {...register('address',{ required: "address is required" })} id="" />
+  <label style={{float:'center',position: 'relative',left:'530px'}} className="mb-5 text-light" htmlFor="">Password</label>
+  <input type="password" style={{float:'center',position: 'relative',left:'550px'}} name="password" {...register('password',{ required: "password is required" })} id="" />
   <br />
-  <label className="mb-5" htmlFor="">Place</label>
-  <input type="text" name="place" {...register('place',{ required: "place is required" })} id="" />
-  <br />
-  <label className="mb-5" htmlFor="">Contact number</label>
-  <input type="phone" name="contact number" {...register('contact number',{ required: "contact number is required" })} id="" />
-  <br />
-  <label className="mb-5" htmlFor="">College</label>
-  <input type="text" name="college" {...register('college',{ required: "college is required" })} id="" />
-  <br />
-   <button className="mb-5" type="submit">Submit</button>
+  
+  
+  
+   <button style={{float:'center',position: 'relative',left:'600px'}} className="mb-5 bg-primary" type="submit">Submit</button>
 </form>
+</div>
 
 
 
